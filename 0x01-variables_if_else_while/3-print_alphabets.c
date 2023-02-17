@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: Prints the alphabet in lowercase, then uppercase,
- * each on separate lines.
+ * each on separate lines, using only 3 putchar calls.
  *
  * Return: Always 0 (Success)
  */
@@ -17,12 +17,12 @@ int main(void)
 	{
 		putchar(lower_case);
 		putchar('\n');
-		lower_case++;
-
 		putchar(upper_case);
-		putchar('\n');
+		lower_case++;
 		upper_case++;
 	}
+
+	putchar('\n');
 
 	return (0);
 }
