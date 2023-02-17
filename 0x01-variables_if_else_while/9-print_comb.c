@@ -15,7 +15,7 @@ int main(void)
 
 	for (u = 0 ; u < 10 ; u++)
 	{
-		putchar((u % 10 + '0');
+		putchar((u % 10) + '0');
 		if (u == 9)
 		/*continue printing comma and space except if u == 9*/
 			continue;
@@ -24,4 +24,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-}
+	}
