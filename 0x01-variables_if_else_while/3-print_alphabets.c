@@ -1,27 +1,23 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
- * main - Entry point
+ * main - print lowercase followed by uppercase alphabets
  *
- * Description: Prints the alphabet in lowercase, then uppercase,
- * each on separate lines, using only 3 putchar calls.
- *
- * Return: Always 0 (Success)
+ * Return: 0 (succesful)
  */
 int main(void)
 {
-	char lower_case = 'a';
-	char upper_case = 'A';
+	char g;
+	char m;
 
-	while (lower_case <= 'z' && upper_case <= 'Z')
+	for (g = 'a' ; g <= 'z' ; g++)
 	{
-		putchar(lower_case"\n");
-		putchar(upper_case);
-		lower_case++;
-		upper_case++;
+		putchar(g);
 	}
-
+	for (m = 'A' ; m <= 'Z' ; m++)
+	{
+		putchar(m);
+	}
 	putchar('\n');
-
 	return (0);
 }
