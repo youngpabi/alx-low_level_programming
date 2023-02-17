@@ -3,7 +3,8 @@
 /**
  * main - Entry point
  *
- * Description: Prints the alphabet in lowercase, then uppercase
+ * Description: Prints the alphabet in lowercase, then uppercase,
+ * each on separate lines.
  *
  * Return: Always 0 (Success)
  */
@@ -15,12 +16,13 @@ int main(void)
 	while (lower_case <= 'z' && upper_case <= 'Z')
 	{
 		putchar(lower_case);
+		putchar('\n');
 		lower_case++;
+
 		putchar(upper_case);
+		putchar('\n');
 		upper_case++;
 	}
-
-	putchar('\n');
 
 	return (0);
 }
