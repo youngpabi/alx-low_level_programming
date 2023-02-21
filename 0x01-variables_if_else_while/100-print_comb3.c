@@ -15,7 +15,7 @@ int main(void)
 	for (x = 0 ; x <= 8 ; x++)
 	{
 		/*loop through y,2nd digit,higher than a by 1,highest possible is 9*/
-		for (y = a + 1 ; y <= 9 ; y++)
+		for (y = x + 1 ; y <= 9 ; y++)
 		{
 			putchar((x % 10) + '0');
 			putchar((y % 10) + '0');
