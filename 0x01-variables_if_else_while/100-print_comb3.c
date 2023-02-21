@@ -9,10 +9,8 @@ int main(void)
 	/*
 	 * prints all combination of 2 different digits
 	 */
-
 	/* take x abd y as possible digits */
 	int x, y;
-
 	/*loop through x,1st digit,lowest of the 2, highest possible is 8*/
 	for (x = 0 ; x <= 8 ; x++)
 	{
