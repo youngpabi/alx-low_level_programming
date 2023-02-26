@@ -1,26 +1,29 @@
 #include <stdio.h>
 /**
- * main - entry 
+ * main - is entry of program
  *
- * Return: 0 (succesful)
+ * Return: 0(succesful)
  */
 int main(void)
 {
 	/*
-	 * prints all combination of 2 different digits
+	 * prints all combination of 2 different digits once,in accending order
+	 * after each combination follows a coma and a space
 	 */
-	/* take x abd y as possible digits */
-	int x, y;
-	/*loop through x,1st digit,lowest of the 2, highest possible is 8*/
-	for (x = 0 ; x <= 8 ; x++)
+
+	/* take ab as possible digits */
+	int a, b;
+
+	/*loop through a,1st digit,lowest of the 2, highest possible is 8*/
+	for (a = 0 ; a <= 8 ; a++)
 	{
-		/*loop through y,2nd digit,higher than a by 1,highest possible is 9*/
-		for (y = x + 1 ; y <= 9 ; y++)
+		/*loop through b,2nd digit,higher than a by 1,highest possible is 9*/
+		for (b = a + 1 ; b <= 9 ; b++)
 		{
-			putchar((x % 10) + '0');
-			putchar((y % 10) + '0');
+			putchar((a % 10) + '0');
+			putchar((b % 10) + '0');
 			/*continues to put coma,space,stop if last highest combination is met*/
-			if (x == 8 && y == 9)
+			if (a == 8 && b == 9)
 				continue;
 			putchar(',');
 			putchar(' ');
