@@ -15,8 +15,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int nod;
 
 	if (opy == NULL)
+	{
 		return (-1);
-
+	}
 	if (index == 0)
 	{
 		*head = (*head)->next;
@@ -28,7 +29,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (opy->next == NULL)
 			return (-1);
-
 		opy = opy->next;
 	}
 
