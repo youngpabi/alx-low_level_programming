@@ -12,16 +12,16 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *fig;
-	int cool;
+	int c;
 
 	if (*head == NULL)
 		return (0);
 
 	first = *head;
-	cool = (*head)->n;
+	c= (*head)->n;
 	*head = (*head)->next;
 
 	free(fig);
 
-	return (cool);
+	return (c);
 }

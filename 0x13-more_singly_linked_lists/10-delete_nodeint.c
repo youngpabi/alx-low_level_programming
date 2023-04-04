@@ -1,21 +1,40 @@
 #include "lists.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * listint_len - returns the number of elements in a linked listint_t list.
- * @h: pointer to the head of linked list
+ * delete_nodeint_at_index - deletes the node at given index
+ *                           of a listint_t linked list.
+ * @head: double pointer to the first head node in the list
+ * @index: index of the node to delete
  *
- * Return: number of elements in a linked listint_t list
+ * Return: (1) if success ELSE (-1) if failure
  */
 
-size_t listint_len(const listint_t *h)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	size_t nodes = 0;
+	listint_t *tep,*opy = *head;
+	unsigned int nod;
 
-	while (h != NULL)
+	if (opy == NULL)
+		return (-1);
+
+	if (index == 0)
 	{
-		nodes++;
-		h = h->next;
+		*head = (*head)->next;
+		free(opy);
+		return (1);
 	}
-	return (nodes);
+
+	for (nod = 0; nod < (index - 1); nod++)
+	{
+		if (opy->next == NULL)
+			return (-1);
+
+		opy = opy->next;
+	}
+
+	tep = opy->next;
+	opy->next = tep->next;
+	free(tep);
+	return (1);
 }
