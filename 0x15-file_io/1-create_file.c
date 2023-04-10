@@ -1,38 +1,39 @@
 #include "main.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#include <stdlib.h>
 
 /**
- * create_file - creates a file.
- * @filename: name of the file to create
- * @text_content: NULL terminated string to write to the file
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
  *
- * Return: -1 if failure else 1
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
  */
-
-int create_file(const char *filename, char *text_content)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int o, w;
-	int le = 0;
+	ssize_t o, r, w;
+	char *buffer;
 
 	if (filename == NULL)
-		return (-1);
+		return (0);
 
-	if (text_content != NULL)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		for (le = 0; text_content[le];)
-			le++;
+		free(buffer);
+		return (0);
 	}
 
-	m = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	n = write(m, text_content,le);
+	free(buffer);
+	close(o);
 
-	if (m == -1 || n == -1)
-		return (-1);
-
-	close(m);
-
-	return (1);
+	return (w);
 }
