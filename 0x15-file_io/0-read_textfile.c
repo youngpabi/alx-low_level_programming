@@ -35,55 +35,32 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t r, w;
-	char *buffer;
+	int san;
+	ssize_t t, w;
+	char *buff;
 
 	if (filename == NULL)
 		return (0);
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	san = open(filename, O_RDONLY);
+	if (san == -1)
 		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
+	buff = malloc(sizeof(char) * letters);
+	if (buff == NULL)
 	{
-		close(fd);
+		close(san);
 		return (0);
 	}
-	r = read(fd, buffer, letters);
-	close(fd);
-	if (r == -1)
+	r = read(san, buff, letters);
+	close(san);
+	if (t == -1)
 	{
-		free(buffer);
+		free(buff);
 		return (0);
 	}
-	w = write(STDOUT_FILENO, buffer, r);
-	free(buffer);
-	if (r != w)
+	w = write(STDOUT_FILENO, buff, t);
+	free(buff);
+	if (t != w)
 		return (0);
 	return (w);
 }
-	if (filename == NULL)
-		return (0);
-	nas = open(filename, O_RDONLY);
-	if (nas == -1)
-		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-	{
-		close(nas);
-		return (0);
-	}
-	r = read(nas, buffer, letters);
-	close(nas);
-	if (v == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-	w = write(STDOUT_FILENO, buffer, r);
-	free(buffer);
-	if (v != z)
-		return (0);
-	return (z);
-}
+	
