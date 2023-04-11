@@ -1,37 +1,35 @@
-0x13. C - More singly linked lists
-C
-Algorithm
-Data structure
- 
-Resources
-Read or watch:
+it Manipulation 📃 0x14-bit_manipulation
+About this project:
+In this project i learnt and practiced;
 
-Google
-Youtube
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+How to manipulate bits and use bitwise operators.
+Tasks file description:
+main.h:Header file containing prototypes for all functions written in the project.
 
-General
-How to use linked lists
-Start to look for the right source of information without too much help
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
-You are allowed to use _putchar
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called lists.h
-Don’t forget to push your header file
-All your header files should be include guardedBasic c programming
+0-binary_to_uint.c: C function that converts a binary number to an unsigned int.
+
+b is a pointer to a string of 0 and 1 characters.
+If b is NULL or there are one or more characters in b that are not 0 or 1 - returns 0.
+Otherwise - returns the converted number.
+1-print_binary.c: C function that prints the binary representation of a number.
+
+2-get_bit.c: C function that returns the value of a bit at a given index.
+
+Indices start at 0.
+Returns -1 if error.
+Else returns the value of the bit at the given index.
+3-set_bit.c: C function that sets the value of a bit at a given index to 1.
+
+If an error occurs - returns -1.
+Otherwise - returns 1.
+4-clear_bit.c: C function that sets the value of a bit at a given index to 0.
+
+Returns -1 if error
+Else - returns 1.
+5-flip_bits.c: C function that returns the number of bits need to be flipped to get from one number to another.
+
+100-get_endianness.c: C function that checks the endianness.
+
+Returns 0 if Big-endian
+Returns 1 if Little-endian
+101-password: File containing the password for the crackme3 executable.
