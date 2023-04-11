@@ -37,11 +37,11 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	wet = open(filename, O_WRONLY | O_APPEND);
+	we = open(filename, O_WRONLY | O_APPEND);
 	if (san == -1)
 		return (-1);
 	if (text_content != NULL)
-		le = write(wet, text_content, _strlen(text_content));
+		le = write(we, text_content, _strlen(text_content));
 	close(wet);
 	if (le == -1)
 		return (-1);
