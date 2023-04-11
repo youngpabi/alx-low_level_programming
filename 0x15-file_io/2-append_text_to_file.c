@@ -32,17 +32,17 @@ size_t _strlen(char *str)
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int ret;
+	int wet;
 	ssize_t le;
 
 	if (filename == NULL)
 		return (-1);
-	ret = open(filename, O_WRONLY | O_APPEND);
+	wet = open(filename, O_WRONLY | O_APPEND);
 	if (san == -1)
 		return (-1);
 	if (text_content != NULL)
-		le = write(ret, text_content, _strlen(text_content));
-	close(ret);
+		le = write(we, text_content, _strlen(text_content));
+	close(wet);
 	if (le == -1)
 		return (-1);
 	return (1);
