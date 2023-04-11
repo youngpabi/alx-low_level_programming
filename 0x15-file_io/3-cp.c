@@ -115,4 +115,3 @@ int main(int argc, char *argv[])
 	check100(close_from, fd_from);
 	return (0);
 }
-
