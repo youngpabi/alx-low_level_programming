@@ -16,7 +16,7 @@ int set_bit(unsigned long int *a, unsigned int index)
 		return (-1);
 
 	set_b = 1 << index;
-	*a = *a | set;
+	*a = *a | set_b;
 
 	return (1);
 }
