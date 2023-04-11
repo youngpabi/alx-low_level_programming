@@ -41,7 +41,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (san == -1)
 		return (-1);
 	if (text_content != NULL)
-		le = write(we, text_content, _strlen(text_content));
+		le = write(wet, text_content, _strlen(text_content));
 	close(wet);
 	if (le == -1)
 		return (-1);
