@@ -5,10 +5,10 @@
 #include <fcntl.h>
 
 /**
- * _strlen - length of a string
- * @str: pointer to string
+ * _strlen - the length of a string
+ * @str: A pointer to string
  *
- * Return: length of string
+ * Return: the length of string
  */
 
 size_t _strlen(char *str)
@@ -25,8 +25,8 @@ size_t _strlen(char *str)
  * @filename: A pointer to the name of the file.
  * @text_content: The string to add to the end of the file.
  *
- * Return: -1 If the function fails or filename is NULL
- *         -1 If the file does not exist the user lacks write permissions
+ * Return: -1 If  function fails or filename is NULL
+ *         -1 If  file does not exist the user lacks write permissions
  *         Else 1.
  */
 

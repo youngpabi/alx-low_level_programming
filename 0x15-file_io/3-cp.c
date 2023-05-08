@@ -6,8 +6,8 @@
 #include <stdio.h>
 
 /**
- * check97 - checks for the correct number of arguments
- * @argc: number of arguments
+ * check97 - it checks for the correct number of arguments
+ * @argc: a number of arguments
  *
  * Return: void
  */
@@ -80,11 +80,11 @@ void check100(int check, int san)
 	}
 }
 /**
- * main - opies the content of a file to another file.
- * @argc: number of arguments passed
- * @argv: array of pointers to the arguments
+ * main - opens the content of a file to another file.
+ * @argc: a number of arguments passed
+ * @argv: an array of pointers to the arguments
  *
- * Return: 0 on success
+ * Return: 0 if success
  */
 int main(int argc, char *argv[])
 {
