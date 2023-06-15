@@ -6,6 +6,7 @@
  * @head:this  double pointer to the beginning of the linked list
  * @n:The integer value to add to new node
  * Return:The pointer to address of new node, else NULL if failure
+ * for AlX_project
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
